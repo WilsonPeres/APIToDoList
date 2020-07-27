@@ -10,9 +10,6 @@ class Form extends React.Component {
       const resp = await axios.get(`https://api.github.com/users/${this.userNameInput.current.value}`);
       this.props.onSubmit(resp.data);
       this.userNameInput.current.value = '';
-      // console.log('submitted');
-      // console.log(this.userNameInput.current.value);
-      // console.log(resp.data);
     } catch (error){
       console.error(error);
       console.log('Houston we have a problem!');
